@@ -1,0 +1,12 @@
+{% if user %}
+<h1>Edit</h1>
+<form action='update/' method="post">
+  {% csrf_token %}
+  First: <input type="text" name="first" id='first' value={{first}}><br>
+  Last: <input type="text" name="last" id='last' value={{last}}><br>
+  Email: <input type="text" name="email" id='email' value={{email}}><br>
+  <input type='submit' value='submit'>
+</form>
+{%else%}
+  <p>No such user</p>
+{%endif%}

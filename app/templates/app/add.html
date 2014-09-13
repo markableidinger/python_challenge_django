@@ -1,0 +1,12 @@
+{% if user %}
+<h1>Add</h1>
+<form action='create/' method="post">
+  {% csrf_token %}
+  First: <input type="text" name="first" id='first'><br>
+  Last: <input type="text" name="last" id='last'><br>
+  Email: <input type="text" name="email" id='email'><br>
+  <input type='submit' value='submit'>
+</form>
+{%else%}
+  <p>No such user</p>
+{%endif%}

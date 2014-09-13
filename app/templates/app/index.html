@@ -1,0 +1,12 @@
+<h1>USERS</h1>
+{% if user_list %}
+    <ul>
+    {% for user in user_list %}
+        <li>{{ user.first }} {{user.last}}, {{user.email}} <a href="{{user.id}}/edit">Edit</a> <a href="{{user.id}}/delete">Delete</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No users.</p>
+{% endif %}
+<a href='/app/add'>Add</a>
+
